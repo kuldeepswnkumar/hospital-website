@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>payment</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap");
+
+    :root {
+      --blue: #008040;
+      --black: #444444;
+      --light-color: #777;
+      --bg-color: #ebe8e8;
+      --border: 0.1rem solid rgba(6, 148, 250, 0.4);
+      --box-shadow: 1px 7px 7px rgb(109, 109, 109);
+    }
+
+    * {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-transform: capitalize;
+      transition: 0.3s all;
+    }
+    html {
+      width: 100%;
+      height: 100%;
+      font-size: 62.5%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: var(--bg-color);
+      max-height: 100%;
+    }
+    #payment {
+      width: 100%;
+      padding: 3rem;
+      margin: auto;
+      min-height: 100vh;
+      background-color: var(--black);
+    }
+    #payment h1 {
+      color: #fff;
+    }
+
+    #payment form {
+      padding: 2rem;
+      width: 75rem;
+      background: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    #payment .containar-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
+
+    #payment form .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    #payment form .row .col {
+      flex: 1 1 25rem;
+    }
+
+    #payment form .row .col .title {
+      font-size: 2rem;
+      color: #333;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    #payment form .row .col .inputBox {
+      margin: 1.5rem 0;
+    }
+
+    #payment form .row .col .inputBox span {
+      margin-bottom: 1rem;
+      display: block;
+      font-size: 1.5rem;
+    }
+
+    #payment form .row .col .inputBox input {
+      width: 100%;
+      border: 1px solid #ccc;
+      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+      text-transform: none;
+    }
+
+    #payment form .row .col .inputBox input:focus {
+      border: 1px solid #000;
+    }
+
+    #payment form .row .col .flex {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    #payment form .row .col .flex .inputBox {
+      margin-top: 0.5rem;
+    }
+
+    #payment form .row .col .inputBox img {
+      height: 3.5rem;
+      margin-top: 0.6rem;
+      filter: drop-shadow(0 0 1px #000);
+    }
+
+    #payment form .submit-btn {
+      width: 100%;
+      padding: 1.5rem;
+      font-size: 1.7rem;
+      background: #27ae60;
+      color: #fff;
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+
+    #payment form .submit-btn:hover {
+      background: #2ecc71;
+    }
+  </style>
+  <body>
+    <!-- Payment Section -->
+
+    <section id="payment">
+      <div class="containar-section">
+        <form action="">
+          <div class="row">
+            <div class="col">
+              <h3 class="title">billing address</h3>
+
+              <div class="inputBox">
+                <span>full name :</span>
+                <input type="text" placeholder="Enter your name" />
+              </div>
+              <div class="inputBox">
+                <span>email :</span>
+                <input type="email" placeholder="Enter your email" />
+              </div>
+              <div class="inputBox">
+                <span>address :</span>
+                <input type="text" placeholder="room - street - locality" />
+              </div>
+              <div class="inputBox">
+                <span>city :</span>
+                <input type="text" placeholder="Enter city" />
+              </div>
+
+              <div class="flex">
+                <div class="inputBox">
+                  <span>state :</span>
+                  <input type="text" placeholder="Enter contary" />
+                </div>
+                <div class="inputBox">
+                  <span>zip code :</span>
+                  <input type="text" placeholder="Enter pin code" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <h3 class="title">payment</h3>
+
+              <div class="inputBox">
+                <span>cards accepted :</span>
+                <img src="img/card_img.png" alt="cardImg" />
+              </div>
+              <div class="inputBox">
+                <span>name on card :</span>
+                <input type="text" placeholder="Enter your name on card " />
+              </div>
+              <div class="inputBox">
+                <span>credit card number :</span>
+                <input type="number" placeholder="1111-2222-3333-4444" />
+              </div>
+              <div class="inputBox">
+                <span>exp month :</span>
+                <input type="text" placeholder="january" />
+              </div>
+
+              <div class="flex">
+                <div class="inputBox">
+                  <span>exp year :</span>
+                  <input type="number" placeholder="2022" />
+                </div>
+                <div class="inputBox">
+                  <span>CVV :</span>
+                  <input type="text" placeholder="1234" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="proceed to checkout" class="submit-btn" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
